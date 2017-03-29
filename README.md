@@ -54,7 +54,7 @@ Or install it yourself as:
 - startTime (Time)
 - thumbnailUrl
 - communityIcon
-- scoreTimeshiftReserved
+- scoreTimeshiftReserved (Integer)
 - liveStatus
 
 Detailed in: https://www59.atwiki.jp/nicoapi/pages/51.html (Japanese)
@@ -64,9 +64,11 @@ Detailed in: https://www59.atwiki.jp/nicoapi/pages/51.html (Japanese)
 Example:
 ```ruby
 params = {
-  tags: [
-    'hoge', 'fuga'
-  ]
+  filters: {
+    tags: [
+      'hoge', 'fuga'
+    ],
+  }
 }
 ```
 
@@ -79,7 +81,7 @@ params = {
     viewCounter: {
       gte: 1000000,
       lt: 2000000,
-    }
+    },
   }
 }
 ```
